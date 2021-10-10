@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webscraper", "Webscraper\Webscraper.csproj", "{927C45C6-56DE-4A96-9652-7F9E35A81C4B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChitChatApp", "ChitChatApp\ChitChatApp.csproj", "{CED70DC0-1818-4A50-A7C8-303C762580B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowStoreClone", "WindowStoreClone\WindowStoreClone.csproj", "{2CAB3376-63D7-49E8-888C-A761C8EE2A4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{927C45C6-56DE-4A96-9652-7F9E35A81C4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{927C45C6-56DE-4A96-9652-7F9E35A81C4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{927C45C6-56DE-4A96-9652-7F9E35A81C4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CED70DC0-1818-4A50-A7C8-303C762580B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED70DC0-1818-4A50-A7C8-303C762580B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED70DC0-1818-4A50-A7C8-303C762580B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED70DC0-1818-4A50-A7C8-303C762580B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CAB3376-63D7-49E8-888C-A761C8EE2A4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CAB3376-63D7-49E8-888C-A761C8EE2A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CAB3376-63D7-49E8-888C-A761C8EE2A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CAB3376-63D7-49E8-888C-A761C8EE2A4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
