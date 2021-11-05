@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WindowStoreClone.UserControls;
 
 namespace WindowStoreClone.Pages
 {
@@ -29,6 +30,7 @@ namespace WindowStoreClone.Pages
         public AppDetails(AnApp inApp)
         {
             InitializeComponent();
+
             AppDetailsTitleAndBackgroundUC.AppNameLabel.Content = inApp.AppName;
             AppDetailsTitleAndBackgroundUC.AppImage.Source = inApp.AppImageSource;
             AppDetailsTitleAndBackgroundUC.BackButtonClicked += AppDetailsTitleAndBackgroundUC_BackButtonClicked;

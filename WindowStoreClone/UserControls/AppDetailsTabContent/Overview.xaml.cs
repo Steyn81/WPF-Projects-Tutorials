@@ -20,6 +20,7 @@ namespace WindowStoreClone.UserControls.AppDetailsTabContent
     {
         public delegate void OnAppDetailsAppClicked(AnApp sender, RoutedEventArgs e);
         public event OnAppDetailsAppClicked AppClicked;
+        
         public Overview()
         {
             InitializeComponent();

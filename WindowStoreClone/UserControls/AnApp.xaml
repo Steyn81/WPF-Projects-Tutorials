@@ -8,16 +8,19 @@
              Height="335" 
              Width="210"
              Margin="7,7,7,7">
-    
+
+    <!--NB! MouseDown Don't work, only MouseUp-->
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.6*"/>
             <RowDefinition Height="0.4*"/>
         </Grid.RowDefinitions>
         
+
         <Image Grid.Row="0" Name="ProductImage" MouseUp="ProductImage_MouseUp"/>
         
-        <Grid Name="ButtomGrid" 
+        <Grid Name="BottomGrid" 
               Grid.Row="1" Grid.Column="1" 
               Background="#1F1F1F"
               MouseUp="ProductImage_MouseUp">
@@ -26,6 +29,7 @@
                 <RowDefinition Height="0.7*"/>
                 <RowDefinition Height="0.25*"/>
             </Grid.RowDefinitions>
+            
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>

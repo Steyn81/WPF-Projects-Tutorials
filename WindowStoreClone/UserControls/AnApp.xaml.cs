@@ -13,23 +13,26 @@ using System.Windows.Media.Imaging;
 
 namespace WindowStoreClone.UserControls
 {
-    /// <summary>
-    /// Interaction logic for AnApp.xaml
-    /// </summary>
     public partial class AnApp : UserControl
     {
         public string AppName;
         public ImageSource AppImageSource;
 
+        //Delegate needed
         public delegate void OnAppClicked(AnApp sender, RoutedEventArgs e);
         public event OnAppClicked AppClicked;
 
         public AnApp()
         {
             InitializeComponent();
+
             List<string> filepaths = Directory.GetFiles(Environment.CurrentDirectory + @"\..\..\Images", "*.png").ToList<string>();
+
             FileInfo myRandomFile = new FileInfo(filepaths[StaticRandom.Next(filepaths.Count)]);
+
+            //Set the image property to selected random image
             ProductImage.Source = new BitmapImage(new Uri(myRandomFile.FullName, UriKind.RelativeOrAbsolute));
+
             AppNameText.Text = (new CultureInfo("en-US", false).TextInfo).ToTitleCase(myRandomFile.FullName.Split('\\').Last().Split('-').Last().Split('.').First());
             AppName = AppNameText.Text.ToString();
             AppImageSource = ProductImage.Source;
@@ -38,6 +41,7 @@ namespace WindowStoreClone.UserControls
         public AnApp(string inAppName, ImageSource inImageSource)
         {
             InitializeComponent();
+
             ProductImage.Source = inImageSource;
             AppNameText.Text = inAppName;
             AppName = inAppName;
@@ -46,6 +50,7 @@ namespace WindowStoreClone.UserControls
 
         private void ProductImage_MouseUp(object sender, MouseButtonEventArgs e)
         {
+            //Event name at the top
             AppClicked(this, e);
         }
     }

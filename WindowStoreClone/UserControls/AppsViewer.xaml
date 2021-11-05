@@ -13,6 +13,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50"/>
             <ColumnDefinition Width="*"/>
@@ -36,6 +37,7 @@
             </Style>
         </Grid.Resources>
         
+        <!--Left Button-->
         <Button Style="{StaticResource AccentCircleButtonStyle}"
                 Width="40"
                 Height="40"
@@ -46,6 +48,7 @@
                 Click="ScrollLeftButton_Click"
                 Content="&lt;"/>
         
+        <!--Scroll Viewer-->
         <ScrollViewer Grid.Column="1"
                       x:Name="AppsScrollView"
                       VerticalScrollBarVisibility="Hidden"
@@ -60,15 +63,19 @@
             
             <ItemsControl x:Name="AppsList" 
                           ItemTemplate="{StaticResource AppListTemplate}">
+                
+                <!--Display apps in horizontal view-->
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <VirtualizingStackPanel Orientation="Horizontal"/>
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
+                
             </ItemsControl>
             
         </ScrollViewer>
         
+        <!--Right Button-->
         <Button Style="{StaticResource AccentCircleButtonStyle}"
                 Width="40"
                 Height="40"

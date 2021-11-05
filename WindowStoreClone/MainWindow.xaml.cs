@@ -1,15 +1,12 @@
 ﻿using MahApps.Metro.Controls;
 using System.Windows;
-using WPF_MC.Pages;
-using WPF_MC.UserControls;
-using WPF_MC.Window;
+using WindowStoreClone.Pages;
+using WindowStoreClone.UserControls;
 
 namespace WindowStoreClone
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+
+    public partial class MainWindow : MetroWindow
     {
         private Main MainWindowContentPage;
         private TopAppsWrapped MyTopAppsWrappedPage;
@@ -19,13 +16,16 @@ namespace WindowStoreClone
         public MainWindow()
         {
             InitializeComponent();
+
             MainWindowContentPage = new Main();
             MainWindowContentPage.TopAppButtonClicked += MainWindowContentPage_TopAppButtonClicked;
             MainWindowContentPage.AppClicked += MainWindowContentPage_AppClicked;
             MainWindowContentPage.DownloadsAndUpdatesClicked += MainWindowContentPage_DownloadsAndUpdatesClicked;
+
             MyTopAppsWrappedPage = new TopAppsWrapped();
             MyTopAppsWrappedPage.AnAppClicked += MainWindowContentPage_AppClicked;
             MyTopAppsWrappedPage.BackButtonClicked += BackButtonClicked;
+
             DownloadsAndUpdatesPage = new DownloadsAndUpdates();
             DownloadsAndUpdatesPage.BackButtonClicked += BackButtonClicked;
         }
@@ -59,18 +59,7 @@ namespace WindowStoreClone
 
         private void ChangeAppStyleButtonClick(object sender, RoutedEventArgs e)
         {
-            //TODO: Step 9: Add the folllowing 
-            if (accentThemeTestWindow != null)
-            {
-                accentThemeTestWindow.Activate();
-                return;
-            }
-            accentThemeTestWindow = new AccentStyleWindow();
-            accentThemeTestWindow.Owner = this;
-            accentThemeTestWindow.Closed += (o, args) => accentThemeTestWindow = null;
-            accentThemeTestWindow.Left = this.Left + this.ActualWidth / 2.0;
-            accentThemeTestWindow.Top = this.Top + this.ActualHeight / 2.0;
-            accentThemeTestWindow.Show();
+
         }
     }
 }
